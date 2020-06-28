@@ -1,34 +1,12 @@
-class Cliente {
-    nome;
-    cpf;
-}
-
-class ContaCorrente {
-    agencia;
-    _saldo = 0;
-
-    sacar(valor) {
-        if (this._saldo >= valor) {
-            this._saldo -= valor;
-            return valor;
-        }
-    }
-
-    depositar(valor) {
-        if (valor <= 0) {
-            return;
-        }
-
-        this._saldo += valor;
-    }
-}
+// importação das classes
+import { Cliente } from './Cliente.js';
+import { ContaCorrente } from './ContaCorrente.js';
 
 // cria novo cliente
 const cliente1 = new Cliente();
 cliente1.nome = "Ricardo";
 cliente1.cpf = 11122233309;
 
-// cria novo cliente
 const cliente2 = new Cliente();
 cliente2.nome = "Alice";
 cliente2.cpf = 88822233309;
@@ -36,13 +14,17 @@ cliente2.cpf = 88822233309;
 // cria nova conta corrente
 const contaCorrenteRicardo = new ContaCorrente();
 contaCorrenteRicardo.agencia = 1001;
+contaCorrenteRicardo.cliente = cliente1;
+
+const contaCorrenteAlice = new ContaCorrente();
+contaCorrenteAlice.agencia = 1002;
+contaCorrenteAlice.cliente = cliente2;
 
 // realiza deposito na conta
-contaCorrenteRicardo.depositar(100);
+contaCorrenteRicardo.depositar(500);
 
-// realiza saque na conta
-const valorSacado = contaCorrenteRicardo.sacar(50);
-
-console.log(valorSacado);
+// transfere valor
+contaCorrenteRicardo.transferir(200, contaCorrenteAlice);
 
 console.log(contaCorrenteRicardo);
+console.log(contaCorrenteAlice);
