@@ -23,6 +23,9 @@ contaCorrenteAlice.cliente = cliente2;
 // realiza deposito na conta
 contaCorrenteRicardo.depositar(500);
 
+// realiza saque na conta
+contaCorrenteRicardo.sacar(50);
+
 // transfere valor
 contaCorrenteRicardo.transferir(200, contaCorrenteAlice);
 
