@@ -1,5 +1,5 @@
 # javascript-orientacao-a-objetos
- Repositorio para o curso de Javascript Orientação a Objetods da Alura.
+ Projeto desenvolvido no curso JavaScript: Programando a Orientação a Objetos da Alura.
  
  ## Sobre o projeto
  O projeto é uma aplicação simples de um banco onde se pode criar contas do tipo corrente ou poupança, cadastrar clientes e realizar algumas operações (saque, depósito e transferência).
@@ -17,8 +17,3 @@
  * Use atributos, métodos da instância e da classe
  * Defina objetos através de construtores
  * Aprenda sobre encapsulamento
- * Aprofunde seus conhecimentos em Orientação a objetos
- * Saiba o que é o "DuckType"
- * Entenda quando e como usar herança dentro de seus projetos
- * Conheça boas práticas de programação
- * Veja código JavaScript moderno que você pode utilizar em seus projetos
